@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Card,Button} from 'react-native-elements';
+import {Card,Button,Header} from 'react-native-elements';
 import Deck from './src/Deck';
 
 const DATA = [
@@ -48,6 +48,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Header
+        centerComponent={{ text: 'Stack Animation Tinder', style: { color: '#fff' } }}
+        />
         <Deck
           data={DATA}
           renderCard={this.renderCard}
